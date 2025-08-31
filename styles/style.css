@@ -301,6 +301,7 @@
 
 .button__text {
   mix-blend-mode: difference;
+  font-family: var(--accent-font);
 }
 
 .button:focus {
@@ -321,8 +322,4 @@
 
 .button:hover::before {
   transform: translateX(0);
-}
-
-.button__text {
-  font-family: var(--accent-font);
 }
