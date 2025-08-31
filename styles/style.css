@@ -16,6 +16,7 @@
   align-items: center;
 
   font-family: var(--main-font);
+  font-weight: var(--text-weight);
   font-variation-settings: 'wght' var(--text-font-weight);
   font-size: var(--text-font-size, 18px);
   min-inline-size: 320px;
@@ -59,7 +60,8 @@
 
 .card__title {
   padding: 4px 10px;
-  font-weight: 715;
+  font-weight: var(--title-weight);
+  font-size: inherit;
 }
 
 .card__image {
