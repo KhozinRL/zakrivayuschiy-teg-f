@@ -15,14 +15,21 @@
   font-weight: 400;
 }
 
+.font-variation-title {
+  --main-font-weight: var(--main-font-title-weight);
+}
+
+.font-variation-text,
+.font-variation-title {
+  font-variation-settings: 'wght' var(--main-font-weight);
+}
+
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   font-family: var(--main-font);
-  font-weight: var(--main-font-weight);
-  font-variation-settings: 'wght' var(--text-font-weight);
   font-size: var(--text-font-size, 18px);
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -65,8 +72,8 @@
 }
 
 .card__title {
+  font-weight: inherit;
   padding: 4px 10px;
-  font-weight: var(--main-font-title-weight);
   font-size: inherit;
 }
 
@@ -130,6 +137,7 @@
   background-color: transparent;
   border: 2px solid transparent;
   padding: 0;
+  transition: border-color 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
@@ -199,31 +207,31 @@
   transition-delay: 0.05s;
 }
 
-.whiteboard-image {
+.filter-grayscale {
   filter: grayscale(50%);
 }
 
-.unable-image {
+.filter-saturate {
   filter: saturate(390%);
 }
 
-.ideal-pursuit-image {
+.filter-hue-rotate {
   filter: hue-rotate(0.1turn);
 }
 
-.who-nearby-image {
+.filter-grayscale-invert {
   filter: invert() grayscale(0.5);
 }
 
-.strategies-image {
+.filter-sepia {
   filter: sepia(0.5);
 }
 
-.give-up-image {
+.filter-blur {
   filter: blur(10px);
 }
 
-.iam-here-image {
+.filter-contrast-hue-rotate {
   filter: contrast(250%) hue-rotate(150deg);
 }
 
@@ -283,15 +291,21 @@
   line-height: 150%;
 }
 
-.dialog-save[open] .dialog-save__button {
+.dialog-save[open] .dialog-save__form {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
+}
+
+.dialog-save[open] .dialog-save__button {
   width: 100%;
-  padding: 12.5px;
+  padding: 10px 12.5px;
   text-transform: uppercase;
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   background-color: #fff;
   border: var(--border, 2px solid #000);
