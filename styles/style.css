@@ -10,13 +10,18 @@
 
 */
 
+.accent-font {
+  font-family: var(--accent-font);
+  font-weight: 400;
+}
+
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   font-family: var(--main-font);
-  font-weight: var(--text-weight);
+  font-weight: var(--main-font-weight);
   font-variation-settings: 'wght' var(--text-font-weight);
   font-size: var(--text-font-size, 18px);
   min-inline-size: 320px;
@@ -31,7 +36,6 @@
   width: var(--card-width);
   border: var(--border, 2px solid #000);
   background-color: #fff;
-  font-family: var(--accent-font);
   text-transform: uppercase;
   text-align: center;
   padding: clamp(7.5rem, 7.28rem + 0.94vw, 8.125rem) clamp(1rem, -1.344rem + 10vw, 7.656rem);
@@ -40,11 +44,13 @@
 
 .header__title {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  font-weight: inherit;
   margin-bottom: 20px;
 }
 
 .header__subtitle {
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-weight: inherit;
 }
 
 .main {
@@ -60,7 +66,7 @@
 
 .card__title {
   padding: 4px 10px;
-  font-weight: var(--title-weight);
+  font-weight: var(--main-font-title-weight);
   font-size: inherit;
 }
 
@@ -76,7 +82,6 @@
   font-size: 14px;
   top: 25px;
   right: 25px;
-  font-family: var(--accent-font);
   text-transform: uppercase;
   text-shadow: 
     -1px 0 #fff, 
@@ -273,7 +278,6 @@
 .dialog-save[open] .dialog-save__description {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  font-family: var(--accent-font);
   text-transform: uppercase;
   font-size: 14px;
   line-height: 150%;
@@ -303,7 +307,6 @@
 
 .button__text {
   mix-blend-mode: difference;
-  font-family: var(--accent-font);
 }
 
 .button:focus {
